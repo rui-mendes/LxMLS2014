@@ -11,5 +11,12 @@ def f(x):
 
 denominator = f(numerator)/1000
 
-print denominator.sum()
+result = denominator.sum()
+realValue = 1.0/3.0
+
+approximation = realValue - result
+
+print 'RESULT: ' + str(result)
+print 'REAL VALUE: ' + str(realValue)
+print 'APPROXIMATION: ' + str(approximation)
 

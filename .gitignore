@@ -1,2 +1,3 @@
 .idea/
 lxmls-toolkit/
+*.pyc

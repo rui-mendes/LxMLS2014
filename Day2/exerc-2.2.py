@@ -19,19 +19,31 @@ print "Initial Probabilities:\n", hmm.initial_probs
 
 print "\nTransition Counts:\n", hmm.transition_counts
 '''
-Transition Counts: (transiçoes de estados)
+Transition Counts: (state transitions)
         rainy sunny
  rainy [[ 2.  0.]
  sunny [ 2.  5.]]
 '''
 print "Transition Probabilities:\n", hmm.transition_probs
+'''
+Transition Probabilities:
+[[ 0.5    0.   ]
+ [ 0.5    0.625]]
+
+Calculation:
+[[ 2/4   0/8 ]
+[ 2/4     5/8   ]]
+
+where 4 it's the total number of actions with rainy day
+where 8 it's the total number of actions with sunny day
+'''
 
 print "\nFinal Counts:\n", hmm.final_counts
 print "Final Probabilities:\n", hmm.final_probs
 
 print "\nEmission Counts\n", hmm.emission_counts
 '''
-Emission Counts (estados e acções)
+Emission Counts (states and actions)
         rainy sunny
  walk   [[ 3.  2.]
  shop   [ 1.  3.]
@@ -39,6 +51,21 @@ Emission Counts (estados e acções)
  tennis [ 0.  0.]]
 '''
 print "Emission Probabilities\n", hmm.emission_probs
+'''
+Emission Probabilities
+[[ 0.75   0.25 ]
+ [ 0.25   0.375]
+ [ 0.     0.375]
+ [ 0.     0.   ]]
 
+ Calculation:
+[[ 3/4   2/8 ]
+ [ 1/4   3/8]
+ [ 0/4     3/8]
+ [ 0/4     0/8   ]]
+
+ where 4 it's the total number of actions with rainy day
+ where 8 it's the total number of actions with sunny day
+ '''
 
 

@@ -39,7 +39,22 @@ where 8 it's the total number of actions with sunny day
 '''
 
 print "\nFinal Counts:\n", hmm.final_counts
+'''
+Final Counts:
+[ 0.  3.]
+'''
+
 print "Final Probabilities:\n", hmm.final_probs
+'''
+Final Probabilities:
+[ 0.     0.375]
+
+Calculation:
+[ 0/4   3/8 ]
+
+where 4 it's the total number of actions with rainy day
+where 8 it's the total number of actions with sunny day
+'''
 
 print "\nEmission Counts\n", hmm.emission_counts
 '''

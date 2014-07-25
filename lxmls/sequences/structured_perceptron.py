@@ -37,9 +37,9 @@ class StructuredPerceptron(dsc.DiscriminativeSequenceClassifier):
             new_w = new_w / len(self.params_per_epoch)
             self.parameters = new_w
 
-
-
     def perceptron_update(self, sequence):
+
+        ############### NEW CODE ##########################
         num_labels = 0
         num_mistakes = 0
 
@@ -91,9 +91,9 @@ class StructuredPerceptron(dsc.DiscriminativeSequenceClassifier):
             hat_final_features = self.feature_mapper.get_final_features(sequence, y_t_hat)
             self.parameters[hat_final_features] -= self.learning_rate
 
-
         return num_labels, num_mistakes
 
+    ############### NEW CODE - END ##########################
 
     def save_model(self,dir):
         fn = open(dir+"parameters.txt",'w')

@@ -38,3 +38,12 @@ print "CRF - ID Features Accuracy Train: %.3f Dev: %.3f Test: %.3f"%(eval_train,
 
 # CRF -
 # ID Features Accuracy Train: 0.949 Dev: 0.846 Test: 0.858
+
+# Confusion_matrix calculation
+import lxmls.sequences.confusion_matrix as cm
+import matplotlib.pyplot as plt
+confusion_matrix = cm.build_confusion_matrix(test_seq.seq_list, pred_test, len(corpus.tag_dict),
+                                             crf_online.get_num_states())
+
+cm.plot_confusion_bar_graph(confusion_matrix, corpus.tag_dict,
+                            xrange(crf_online.get_num_states()), 'Confusion matrix')
